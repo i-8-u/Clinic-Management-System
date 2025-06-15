@@ -1,0 +1,18 @@
+{
+  "name": "miniproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "frontend": "cd frontend && npm",
+    "backend": "cd backend && npm",
+    "dev": "concurrently \"npm run frontend run dev\" \"npm run backend run dev\"",
+    "install": "npm run frontend i && npm run backend i",
+    "build": "npm install && npm run build --prefix frontend",
+    "start":"npm start --prefix backend"
+  },
+  "dependencies": {
+    "concurrently": "8.2.2",
+    "filepond": "^4.31.1"
+  }
+}
